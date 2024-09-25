@@ -1,0 +1,130 @@
+@media screen and (min-width: 800px) {
+  body {
+    background-image: url("../images/site/small_check.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+  }
+
+  #wrapper {
+    background-color: white;
+    font-size: 20px;
+    border: 0.5em solid #8a2be2;
+    border-radius: 2rem;
+    margin: 2em 5em;
+  }
+
+  /* NAVIGATION PARTIAL */
+  #nav-principal {
+    background-color: #8a2be2;
+    color: white;
+    font-size: 1.5rem;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+  }
+
+  /* HEADER PARTIAL */
+  #top-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .siteName {
+    font-size: 3rem;
+  }
+
+  #tools {
+    grid-column: 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0.65rem;
+  }
+
+  /* MAIN PARTIAL */
+
+  /*+ HOME PAGE +*/
+  #subtitle {
+    padding: 1rem;
+  }
+
+  .herolabel {
+    position: absolute;
+    top: 25rem;
+    left: 12em;
+    background: radial-gradient(#fff, #ebdef0);
+    padding: 1rem;
+    box-shadow: 0 0 3rem #fff;
+    opacity: 0.8;
+  }
+
+  .herolabel h3 {
+    margin: 0;
+    opacity: 1;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .herolabel p {
+    margin: 0;
+    padding: 0.25rem;
+    font-weight: 700;
+    font-size: 1.75rem;
+  }
+
+  .herolabel button {
+    background-color: #8a2be2;
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.7rem;
+    opacity: 1 !important;
+  }
+
+  .hero picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero img {
+    width: 70%;
+    height: 400px;
+  }
+
+  #hero-button:hover {
+    border-color: #8a2be2;
+    background-color: #ebdef0;
+    color: black;
+    font-weight: bold;
+  }
+
+  .info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+    padding: 1rem;
+  }
+
+  #reviews {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
+
+  #reviews ul li {
+    margin-top: 1em;
+  }
+
+  #upgrades {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  .card-img {
+    height: 6rem;
+  }
+
+  footer {
+    padding-left: 2em;
+  }
+}

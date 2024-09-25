@@ -4,3 +4,182 @@
 *:after {
   box-sizing: border-box;
 }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* NAVIGATION PARTIAL */
+#nav-principal {
+  background-color: blueviolet;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+#menu li {
+  display: flex;
+  list-style: none;
+  padding: 0.8rem;
+}
+
+#menu a {
+  color: white;
+  text-decoration: none;
+}
+
+#menu li:hover {
+  color: black;
+  background-color: #ebdef0;
+  font-weight: bold;
+}
+
+/* HEADER PARTIAL */
+#top-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.siteName {
+  grid-column: 1 / 2;
+  color: black;
+  font-size: 2rem;
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.siteName a {
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#tools {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+#tools a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* MAIN PARTIAL */
+
+/*+ HOME PAGE +*/
+.herolabel {
+  position: absolute;
+  top: 16rem;
+  left: 10px;
+  background: radial-gradient(#fff, #ebdef0);
+  padding: 1rem;
+  box-shadow: 0 0 3rem #fff;
+  opacity: 0.80;
+}
+
+.herolabel h3 {
+  margin: 0;
+  opacity: 1;
+}
+
+.herolabel p {
+  margin: 0;
+  padding: .25rem;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.herolabel button {
+  background-color: #8a2be2;
+  color: white;
+  font-size: 1rem;
+  padding: 0.5rem;
+  opacity: 1 !important;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+#hero-button:hover {
+  border-color: #8a2be2;
+  background-color: #ebdef0;
+  color: black;
+  font-weight: bold;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 15em 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+#reviews {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#upgrades {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+.group-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+}
+
+.card {
+  text-align: center;
+}
+
+.card-img {
+  background-color: #ebdef0;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem #fff;
+  padding: 1rem;
+  margin: 1rem;
+  text-align: center;
+  height: 8rem;
+}
+
+#flux-card {
+  grid-column: 1/2;
+  grid-row: 1/2;
+}
+
+#flame-card {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+
+#bumper-card {
+  grid-column: 1/2;
+  grid-row: 2/3;
+}
+
+#hub-card {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
