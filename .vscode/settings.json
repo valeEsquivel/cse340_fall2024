@@ -12,5 +12,6 @@
             "name": "CSE340 Render",
             "connectString": "postgresql://cse340ve:AFYDzhoRfvM0i38YqjlFExwOEmhxIezB@dpg-crp3h2dds78s73d3sgb0-a.frankfurt-postgres.render.com/cse340ve"
         }
-    ]
+    ],
+    "editor.fontFamily": "Dank Mono"
 }
