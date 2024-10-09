@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
   line-height: 1.6;
   margin: 0;
@@ -17,7 +17,9 @@ body {
 #nav-principal {
   background-color: blueviolet;
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  /* width: 100%; */
+  margin: 0px !important;
 }
 
 #menu {
@@ -31,7 +33,7 @@ body {
 #menu li {
   display: flex;
   list-style: none;
-  padding: 0.8rem;
+  padding: 0.5rem;
 }
 
 #menu a {
@@ -54,7 +56,7 @@ body {
 .siteName {
   grid-column: 1 / 2;
   color: black;
-  font-size: 2rem;
+  font-size: 1.75rem;
   padding: 0.5rem;
   text-align: left;
 }
@@ -89,7 +91,7 @@ body {
   background: radial-gradient(#fff, #ebdef0);
   padding: 1rem;
   box-shadow: 0 0 3rem #fff;
-  opacity: 0.80;
+  opacity: 0.8;
 }
 
 .herolabel h3 {
@@ -99,7 +101,7 @@ body {
 
 .herolabel p {
   margin: 0;
-  padding: .25rem;
+  padding: 0.25rem;
   font-weight: 700;
   font-size: 1rem;
 }
@@ -182,4 +184,83 @@ body {
 #hub-card {
   grid-column: 2/3;
   grid-row: 2/3;
+}
+
+#inv-display {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  padding: 8%;
+}
+
+.card-vehicle {
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  list-style: none;
+  width: 350px;
+  border: 2px solid #8a2be2;
+}
+
+.card-vehicle a {
+  color: black;
+}
+
+.price-vehicle {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.card-vehicle img {
+  width: 90%;
+  height: 150px;
+  border-radius: 8px;
+  border: #ebdef0 2px solid;
+}
+
+.card-vehicle hr {
+  border: 0.25rem solid #ebdef0;
+}
+
+.classification-title {
+  text-align: center;
+}
+
+/*+ VEHICLE DETAILS PAGE +*/
+.detail-vehicle {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 2rem;
+  padding: 1rem;
+}
+
+.details-image {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  /* centrar contenido */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-image img {
+  width: 90%;
+  height: 75%;
+  border-radius: 5px;
+  box-shadow: #817e7e 0 0 1rem;
+}
+
+.details-info {
+  grid-row: 2/3;
+  grid-column: 1/2;
+  padding: 10px;
+}
+
+.price-details {
+  background-color: #dcedc8;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-left: 5px;
 }

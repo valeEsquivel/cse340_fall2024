@@ -33,7 +33,7 @@ Util.buildClassificationGrid = async function (data) {
   if (data.length > 0) {
     grid = '<ul id="inv-display">';
     data.forEach((vehicle) => {
-      grid += "<li>";
+      grid += "<li class='card-vehicle'>";
       grid +=
         '<a href="/inv/' +
         vehicle.inv_id +
@@ -65,7 +65,7 @@ Util.buildClassificationGrid = async function (data) {
         "</a>";
       grid += "</h2>";
       grid +=
-        "<span>$" +
+        "<span class='price-vehicle'>$" +
         new Intl.NumberFormat("en-US").format(vehicle.inv_price) +
         "</span>";
       grid += "</div>";
@@ -78,6 +78,32 @@ Util.buildClassificationGrid = async function (data) {
 
   return grid;
 };
+
+/* **************************************
+ * Build the Detail Inventory view HTML
+ * ************************************ */
+Util.buildDetailGrid = async function (data) {
+  let grid;
+  if (data) {
+    grid = `
+    <div class="detail-vehicle">
+      <section class="details-image">
+        <img src="${data[0].inv_image}" alt="Image of ${data[0].inv_make} ${data[0].inv_model} on CSE Motors" />
+      </section>
+      <section class="details-info">
+        <p class="price-details">Price: $${new Intl.NumberFormat("en-US").format(data[0].inv_price)}</p>
+        <p><strong>Year:</strong> ${data[0].inv_year}</p>
+        <p><strong>Description:</strong> ${data[0].inv_description}</p>
+        <p><strong>Color:</strong> ${data[0].inv_color}</p>
+        <p><strong>Miles:</strong> ${new Intl.NumberFormat("en-US").format(data[0].inv_miles)}</p>
+        <p><strong>Classification:</strong> ${data[0].classification_name}</p>
+      </section>
+    </div>  
+    `;
+  }
+
+  return grid;
+}
 
 /* ****************************************
  * Middleware For Handling Errors
