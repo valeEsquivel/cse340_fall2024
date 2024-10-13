@@ -264,3 +264,127 @@ body {
   font-weight: bold;
   padding-left: 5px;
 }
+
+/* LOGIN VIEW */
+#login-main {
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 20px 1fr 1fr;
+  padding: 1rem;
+  text-align: center;
+}
+
+#login-main h2 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 0;
+}
+
+.form-login {
+  grid-column: 1/2;
+  grid-row: 3/4;
+  background-color: #ebdef0;
+  border-radius: 8px;
+  padding: 30px 80px;
+}
+
+#login-btn {
+  background-color: #8a2be2;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+#login-btn:hover {
+  background-color: #ebdef0;
+  color: #8a2be2;
+  font-weight: bold;
+}
+
+/* REGISTER VIEW */
+#registration-main {
+  display: grid;
+  grid-template-columns: 1fr ;
+  grid-template-rows: 1fr;
+  padding: 1rem;
+  text-align: center;
+}
+
+#registration-main h2 {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  margin: 0;
+}
+
+.form-register {
+  grid-column: 1/2;
+  grid-row: 2/3;
+  background-color: #ebdef0;
+  border-radius: 8px;
+  padding: 30px 80px;
+}
+
+#register-btn {
+  background-color: #8a2be2;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+}
+
+#register-btn:hover {
+  background-color: #ebdef0;
+  color: #8a2be2;
+  font-weight: bold;
+}
+
+#show-pass {
+  cursor: pointer;
+  border: 3px solid #8a2be2;
+  border-radius: 15px;
+  padding: 0.5rem;
+  font-size: small;
+  width: 7em;
+  text-align: center;
+}
+
+#messages {
+  grid-row: 2/3;
+  grid-column: 1/4;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(156, 209, 156);
+  color: white;
+  font-weight: bold;
+  width: auto;
+  margin-top: 1rem;
+  border-radius: 8px;
+}
+
+#messages ul {
+  list-style: none;
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.pass-pattern {
+  color: red;
+  font-style: italic;
+  font-size: 14px;
+}
+
+input {
+  font-size: 18px;
+}
+
+.notice {
+  color: red;
+  font-size: 14px;
+  font-weight: bold;
+  list-style: none;
+}

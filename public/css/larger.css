@@ -130,9 +130,9 @@
 
   /*+ VEHICLES FOR CLASSIFICATION +*/
   #inv-display {
-      display: grid;
-      gap: 80px;
-      grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+    display: grid;
+    gap: 80px;
+    grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
   }
 
   /*+ VEHICLE DETAILS PAGE +*/
@@ -150,7 +150,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
   }
 
   .details-image img {
@@ -163,5 +162,48 @@
   .details-info {
     grid-column: 2/3;
     grid-row: 1/2;
+  }
+
+  /* LOGIN VIEW */
+  #login-main {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 20px 3em 1fr;
+    grid-gap: 2em;
+  }
+
+  #login-main h2 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin: 0;
+  }
+
+  .form-login {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: #ebdef0;
+    border-radius: 8px;
+    padding: 30px 80px;
+  }
+
+   /* REGISTER VIEW */
+   #registration-main {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 1fr;
+  }
+
+  #registration-main h2 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin: 0;
+  }
+
+  .form-register {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: #ebdef0;
+    border-radius: 8px;
+    padding: 30px 80px;
   }
 }
