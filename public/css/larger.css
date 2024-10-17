@@ -186,8 +186,8 @@
     padding: 30px 80px;
   }
 
-   /* REGISTER VIEW */
-   #registration-main {
+  /* REGISTER VIEW */
+  #registration-main {
     display: grid;
     grid-template-columns: 200px 1fr 200px;
     grid-template-rows: 1fr;
@@ -205,5 +205,65 @@
     background-color: #ebdef0;
     border-radius: 8px;
     padding: 30px 80px;
+  }
+
+  /* NEW CLASSIFICATION VIEW */
+  #classification-main {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 1fr;
+  }
+
+  #classification-main h2 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin: 0;
+  }
+
+  #classification-main h6 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin: 0;
+  }
+
+  .form-classification {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: #ebdef0;
+    border-radius: 8px;
+    padding: 30px 80px;
+  }
+
+  /* NEW VEHICLE VIEW */
+  #vehicle-main {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px;
+    grid-template-rows: 1fr;
+  }
+
+  #vehicle-main h2 {
+    grid-column: 1/4;
+    grid-row: 1/2;
+    margin: 0;
+  }
+
+  #vehicle-main h6 {
+    grid-column: 1/4;
+    grid-row: 2/3;
+    margin: 0;
+  }
+
+  .form-vehicle {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    background-color: #ebdef0;
+    border-radius: 8px;
+    padding: 30px 80px;
+  }
+
+  .form-vehicle select,
+  .form-vehicle input,
+  .form-vehicle textarea {
+    width: 80%;
   }
 }

@@ -13,5 +13,25 @@
             "connectString": "postgresql://cse340ve:AFYDzhoRfvM0i38YqjlFExwOEmhxIezB@dpg-crp3h2dds78s73d3sgb0-a.frankfurt-postgres.render.com/cse340ve"
         }
     ],
-    "editor.fontFamily": "Dank Mono"
+    "editor.fontFamily": "Dank Mono",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#ece0f2",
+        "activityBar.background": "#ece0f2",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#b4914b",
+        "activityBarBadge.foreground": "#15202b",
+        "commandCenter.border": "#15202b99",
+        "sash.hoverBorder": "#ece0f2",
+        "statusBar.background": "#d7bde2",
+        "statusBar.foreground": "#15202b",
+        "statusBarItem.hoverBackground": "#c29ad2",
+        "statusBarItem.remoteBackground": "#d7bde2",
+        "statusBarItem.remoteForeground": "#15202b",
+        "titleBar.activeBackground": "#d7bde2",
+        "titleBar.activeForeground": "#15202b",
+        "titleBar.inactiveBackground": "#d7bde299",
+        "titleBar.inactiveForeground": "#15202b99"
+    },
+    "peacock.color": "#d7bde2"
 }

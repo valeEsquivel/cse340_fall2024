@@ -1,0 +1,32 @@
+<div id="classification-main">
+    <h2 id="subtitle">
+        <%= title %>
+    </h2>
+
+    <h6 class="go-back"><a href="/inv">Return to Vehicle Management</a></h6>
+
+    <div class="form-classification">
+        <%- messages() %>
+
+            <% if (errors) { %>
+                <ul class="notice">
+                    <% errors.array().forEach(error=> { %>
+                        <li>
+                            <%= error.msg %>
+                        </li>
+                        <% }) %>
+                </ul>
+                <% } %>
+
+                    <form action="/inv/newClassification" method="post">
+                        <div class="form-group">
+                            <label for="classification_name">Classification name:</label>
+                            <div>
+                                <input type="text" id="classification_name" name="classification_name" required
+                                    value="<%= locals.classification_name %>">
+                            </div>
+                        </div>
+                        <button type="submit" id="save-btn" title="Click to Save">Save</button>
+                    </form>
+    </div>
+</div>
