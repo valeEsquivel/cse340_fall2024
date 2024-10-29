@@ -37,7 +37,7 @@ Util.buildClassificationGrid = async function (data) {
     data.forEach((vehicle) => {
       grid += "<li class='card-vehicle'>";
       grid +=
-        '<a href="/inv/' +
+        '<a href="../../inv/detail/' +
         vehicle.inv_id +
         '" title="View "' +
         vehicle.inv_make +
