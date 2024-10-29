@@ -24,12 +24,38 @@ router.post(
 
 // Process the login attempt
 router.post(
-    "/login",
-    regValidate.loginRules(),
-    regValidate.checkLoginData,
-    (req, res) => {
-      res.status(200).send('login process')
-    }
-  )
+  "/login",
+  regValidate.loginRules(),
+  regValidate.checkLoginData,
+  utilities.handleErrors(accountController.accountLogin)
+);
+
+//Route to management page
+router.get("/", utilities.checkLogin, utilities.handleErrors(accountController.buildManagement));
+
+//Logout
+router.get("/logout", utilities.handleErrors(accountController.accountLogout));
+
+// Route to build inventory by classification view
+router.get(
+  "/edit/:account_id",
+  utilities.handleErrors(accountController.buildUpdateView)
+);
+
+//Route to update inventory
+router.post(
+  "/edit/",
+  regValidate.registrationUpdRules(),
+  regValidate.checkRegUpdData,
+  utilities.handleErrors(accountController.updateAccount)
+);
+
+//Route to update password
+router.post(
+  "/updatePassword/",
+  regValidate.registrationUpdPass(),
+  regValidate.checkRegUpdData,
+  utilities.handleErrors(accountController.updatePassword)
+);
 
 module.exports = router;

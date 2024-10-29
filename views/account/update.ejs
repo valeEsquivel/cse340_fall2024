@@ -1,0 +1,76 @@
+<div id="registration-main">
+    <h1 id="subtitle">
+        <%= title %>
+    </h1>
+
+    <%- messages() %>
+
+    <% if (errors) { %>
+        <ul class="notice">
+            <% errors.array().forEach(error => { %>
+                <li><%= error.msg %></li>
+             <%  }) %>
+        </ul>
+    <% } %>
+
+    <div class="form-register">
+        <form action="/account/edit" method="post">
+            <div class="form-group">
+                <label for="account_firstname">First Name:</label>
+                <div>
+                    <input type="text" id="account_firstname" name="account_firstname" required value="<%= locals.account_firstname %>">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="account_lastname">Last Name:</label>
+                <div>
+                    <input type="text" id="account_lastname" name="account_lastname" required value="<%= locals.account_lastname %>">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="account_email">Email Address:</label>
+                <div>
+                    <input type="email" id="account_email" name="account_email" required placeholder="Enter a valid email address" value="<%= locals.account_email %>">
+                </div>
+            </div>
+            <button type="submit" id="register-btn" title="Click to update">Update</button>
+            <input type="hidden" name="account_id" id="account_id" value="<%= locals.account_id %>">
+        </form>
+        <hr>
+        <h3>Update Password</h3>
+        <form action="/account/updatePassword" method="post">
+            <div class="form-group">
+                <label for="account_password">Password:</label>
+                <div>
+                    <span class="pass-pattern">Passwords must be at least 12 characters and contain at least 1 number, 1 capital letter and 1 special character</span>
+                </div>
+                <div>
+                    <i><span class="pass-pattern">*Your original password would be changed.</span></i>
+                </div>
+                <div>
+                    <input type="password" id="account_password" name="account_password" required pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{12,}$">
+                </div>
+                <div>
+                    <span id="show-pass">Show Password</span>
+                </div>
+            </div>
+            <button type="submit" id="register-btn" title="Click to register">Register</button>
+            <input type="hidden" name="account_id" id="account_id" value="<%= locals.account_id %>">
+        </form>
+    </div>
+</div>
+<script>
+    const showPass = document.querySelector('#show-pass');
+
+    showPass.addEventListener('click', function () {
+        const password = document.getElementById('account_password');
+
+        if (password.type === 'password') {
+            password.type = 'text';
+            showPass.textContent = 'Hide Password';
+        } else {
+            password.type = 'password';
+            showPass.textContent = 'Show Password';
+        }
+    });
+</script>

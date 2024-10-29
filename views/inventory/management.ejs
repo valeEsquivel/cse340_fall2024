@@ -1,18 +1,30 @@
 <div id="management-main">
-    <h2 id="subtitle">
+    <h1 id="subtitle">
         <%= title %>
-    </h2>
+    </h1>
 
     <%- messages() %>
 
         <ul>
             <li>
-                <a class="link-new-items" href="/inv/newClassification"
-                    title="Click to add a new classification">Add New Classification</a>
+                <a class="link-new-items" href="/inv/newClassification" title="Click to add a new classification">Add
+                    New Classification</a>
             </li>
             <li>
                 <a class="link-new-items" href="/inv/newVehicle" title="Click to add a new inventory">Add New
                     Inventory</a>
             </li>
         </ul>
+
+        <div class="body-manage">
+            <h2>Manage Inventory</h2>
+            <p>Choose a classification from the list below:</p>
+            <%- classificationSelect %>
+
+                <table id="inventoryDisplay"></table>
+
+                <noscript>JavaScript is required to view the inventory.</noscript>
+        </div>
 </div>
+
+<script src="/js/inventory.js"></script>

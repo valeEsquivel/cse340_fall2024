@@ -1,0 +1,30 @@
+<div id="management-main">
+    <h1 id="subtitle">
+        <%= title %>
+    </h1>
+
+    <%- messages() %>
+
+        <% if (errors) { %>
+            <ul class="notice">
+                <% errors.array().forEach(error=> { %>
+                    <li>
+                        <%= error.msg %>
+                    </li>
+                    <% }) %>
+            </ul>
+            <% } %>
+
+                <div class="body-manage">
+                    <h2>Welcome <%= locals.accountData.account_firstname %>
+                    </h2>
+
+                    <p>You're logged in.</p>
+                    <p><a href="/account/edit/<%= locals.accountData.account_id %>">Edit Account Information</a></p>
+
+                    <% if (locals.accountData.account_type !='Client' ) { %>
+                        <h3>Inventory Management</h3>
+                        <p><a href="/inv/">Manage Inventory</a></p>
+                        <% } %>
+                </div>
+</div>

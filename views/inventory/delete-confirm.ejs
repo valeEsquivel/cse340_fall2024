@@ -1,0 +1,58 @@
+<div id="vehicle-main">
+    <h2 id="subtitle">
+        <%= title %>
+    </h2>
+
+    <h6 class="go-back"><a href="/inv">Return to Vehicle Management</a></h6>
+
+    <div class="form-vehicle">
+        <%- messages() %>
+
+            <% if (errors) { %>
+                <ul class="notice">
+                    <% errors.array().forEach(error=> { %>
+                        <li>
+                            <%= error.msg %>
+                        </li>
+                        <% }) %>
+                </ul>
+                <% } %>
+
+                    <p><strong>Confirm Deletion - The delete is permanent.</strong></p>
+
+                    <form action="/inv/delete" method="post" id="deleteForm">
+                        <div class="form-group">
+                            <label for="inv_make">Make:</label>
+                            <div>
+                                <input type="text" id="inv_make" name="inv_make" required minlength="3"
+                                    value="<%= locals.inv_make %>" placeholder="Min of 3 characters" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inv_model">Model:</label>
+                            <div>
+                                <input type="text" id="inv_model" name="inv_model" required minlength="3"
+                                    value="<%= locals.inv_model %>" placeholder="Min of 3 characters" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inv_year">Year:</label>
+                            <div>
+                                <input type="text" id="inv_year" name="inv_year" required value="<%= locals.inv_year %>"
+                                    minlength="4" maxlength="4" placeholder="4-digit year" readonly>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inv_price">Price:</label>
+                            <div>
+                                <input type="number" step="0.01" id="inv_price" name="inv_price" required
+                                    value="<%= locals.inv_price %>" placeholder="Decimal or Integer" readonly>
+                            </div>
+                        </div>
+                        <button type="submit" id="vehicle-btn" title="Click to delete">Delete Vehicle</button>
+
+                        <input type="hidden" name="inv_id" <% if(locals.inv_id) { %> value="<%= locals.inv_id %>"
+                            <% } %>>
+                    </form>
+    </div>
+</div>

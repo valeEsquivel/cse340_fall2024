@@ -17,6 +17,7 @@ const utilities = require("./utilities/");
 const inventoryRoute = require("./routes/inventoryRoute");
 const accountRoute = require("./routes/accountRoute");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 
 /* ***********************
  * View Engine and Templates
@@ -51,6 +52,12 @@ app.use(function (req, res, next) {
 // Body Parser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+
+// Cookie Parser Middleware
+app.use(cookieParser());
+
+// Middleware to check for JWT Token
+app.use(utilities.checkJWTToken);
 
 /* ***********************
  * Routes
