@@ -202,4 +202,31 @@ Util.checkAccess = (req, res, next) => {
   }
 };
 
+/* ****************************************
+  *  Build reviews HTML
+  * ************************************ */
+Util.buildReviews = async function (data, rating) {
+  let rate = +rating[0].avg;
+
+  if (rate == null) {
+    rate = 0;
+  }
+
+  rate = rate.toFixed(2);
+
+  let reviews = "";
+  reviews += "<h3>** Reviews **</h3>";
+  reviews += "<p id='ratingReview'>Average Rating: " + rate + "</p>";
+  reviews += "<ul id='reviews'>";
+  data.forEach((review) => {
+    reviews += "<li>";
+    reviews += "<p><b>Posted By:</b> " + review.account_firstname + " " + review.account_lastname + "</p>";
+    reviews += "<p> ~" + review.rev_comment + "</p>";
+    reviews += "<p><b>Rating:</b> " + review.rev_points + "</p>";
+    reviews += "</li>";
+  });
+  reviews += "</ul>";
+  return reviews;
+}
+
 module.exports = Util;

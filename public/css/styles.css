@@ -268,7 +268,7 @@ body {
 /* LOGIN VIEW */
 #login-main {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-template-rows: 20px 1fr 1fr;
   padding: 1rem;
   text-align: center;
@@ -307,7 +307,7 @@ body {
 /* REGISTER VIEW */
 #registration-main {
   display: grid;
-  grid-template-columns: 1fr ;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
   padding: 1rem;
   text-align: center;
@@ -533,7 +533,57 @@ input {
   border: 1px solid #8a2be2;
 }
 
-#inventoryDisplay, #inventoryDisplay tr {
+#inventoryDisplay,
+#inventoryDisplay tr {
   border: 1px solid #8a2be2;
   padding: 0.5rem;
+}
+
+/* REVIEWS IN DETAIL PAGE */
+.panel-Reviews {
+  display: grid;
+  grid-template-columns: 1em 1fr 1em;
+  grid-template-rows: 1fr;
+  grid-gap: 1rem;
+}
+
+.revs {
+  background-color: #ebdef0;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  padding: 1rem;
+}
+
+#ratingReview {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #8a2be2;
+}
+
+#reviews li {
+  list-style-type: square;
+  padding-bottom: 10;
+}
+
+#reviews li p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#reviewForm textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  border: 1px solid #8a2be2;
+}
+
+#review-btn {
+  background-color: #8a2be2;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
 }

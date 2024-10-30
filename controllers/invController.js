@@ -1,4 +1,5 @@
 const invModel = require("../models/inventory-model");
+const revModel = require("../models/review-model");
 const utilities = require("../utilities/");
 
 const invCont = {};
@@ -34,11 +35,18 @@ invCont.buildByInventoryId = async function (req, res, next) {
   let nav = await utilities.getNav();
   const className = data[0].inv_make + " " + data[0].inv_model;
 
+  const reviews = await revModel.getReviewsByInvId(inv_id);
+  const rating = await revModel.getAverageRating(inv_id);
+
+  let reviewPanel = await utilities.buildReviews(reviews, rating);
+
   res.render("./inventory/details", {
     title: className,
     nav,
     grid,
     errors: null,
+    reviewPanel,
+    inv_id,
   });
 };
 

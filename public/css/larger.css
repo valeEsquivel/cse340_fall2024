@@ -139,6 +139,7 @@
   .detail-vehicle {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
     grid-gap: 3rem;
     padding: 1rem;
   }
@@ -265,5 +266,16 @@
   .form-vehicle input,
   .form-vehicle textarea {
     width: 80%;
+  }
+
+  /* REVIEW VIEW */
+  .panel-Reviews {
+    display: grid;
+    grid-template-columns: 2em 1fr 2em;
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+  }
+  .revs {
+    padding: 3rem;
   }
 }
